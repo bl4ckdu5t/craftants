@@ -1,0 +1,16 @@
+* { @include box-sizing(border-box); }
+a{ text-decoration: none; color: inherit; }
+html{
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizelegibility;
+	font-size: 62.5%;
+	height: 100%;
+}
+body{
+	margin: 0;
+	background: darken($white, 5%);
+	font-family: $font-stack;
+	font-size: 16px;
+	font-size: 1.6rem;
+	height: 100%;
+}
