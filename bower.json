@@ -1,0 +1,28 @@
+{
+  "name": "craftants",
+  "version": "0.0.1",
+  "authors": [
+    "bl4ckdu5t <joerexko@gmail.com>"
+  ],
+  "description": "Task and Craft finding application",
+  "main": "Gemfile",
+  "moduleType": [
+    "globals"
+  ],
+  "keywords": [
+    "app",
+    "crafts",
+    "tasks",
+    "webapp"
+  ],
+  "license": "MIT",
+  "homepage": "craftants.com",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

@@ -13,4 +13,11 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require wowjs/dist/wow
+//= require uniform/js/jquery.uniform
+//= require bootstrap/dist/js/bootstrap
+//= require mobile/touchSwipe.min
+//= require respond/src/respond
+//= require blueimp-gallery/js/blueimp-gallery
+//= require select2/select2
 //= require_tree .

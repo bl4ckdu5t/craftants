@@ -3,27 +3,11 @@
 * @author Joseph Rex
 * @since 03/11/2015 09:16 Central Time USA
 */
-html{
-    /* Resetting Browser Font to 10px per em */
-    font-size: 62.5%;
-}
-body{
-    font-family: 'Droid Sans', sans-serif;
-    font-size: 1.5rem;
-    //line-height: 15px;
-    color: #73726C;
-}
 
 .btn,a,a:hover{
     text-decoration: none;
     transition: all 0.3s ease-in-out;
     outline:0 ;
-}
-
-h1,h2,h3,h4,h5,h6{
-    font-family:'Roboto Slab', serif;
-    line-height: 1em;
-    margin: 0;
 }
 h1{font-size: 5em;}
 h1.title,h2{font-size: 2em;line-height: 3em;}
