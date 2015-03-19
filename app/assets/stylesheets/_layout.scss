@@ -8,7 +8,6 @@ html{
 }
 body{
 	margin: 0;
-	background: darken($white, 5%);
 	font-family: $font-stack;
 	font-size: 15px;
 	font-size: 1.5rem;
@@ -26,6 +25,7 @@ h1.title,h2{font-size: 2em;line-height: 3em;}
 h3{font-size: 1.5em; margin-bottom: 0.70em;}
 h4{font-size: 1.25em; margin-bottom: 0.75em;}
 p{margin-bottom: 1em;line-height: 1.5em;}
+article{ padding: 20px 80px; }
 .search{
   &--artisans{
 		.select2{

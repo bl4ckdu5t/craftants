@@ -32,15 +32,17 @@
 	    <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
 	      
 	      <ul class="nav navbar-nav">        
-	        <li><a href="<%= root_url %>">Home </a></li>
-	        <li><a href="">How it works</a></li>        
-	        <li><a href="">Sign In</a></li>
+	        <li><%= link_to 'Home', root_url %></li>
+	        <li><%= link_to 'How it works', story_path %></li>        
+	        <li><%= link_to 'Sign In', new_user_session_path %></li>
 	        <li><a href="<%= root_url %>#register">Join</a></li>
 	      </ul>
 	    </div><!-- Wnavbar-collapse -->
 	  </div><!-- container-fluid -->
 	</nav>
 	<!-- header -->
+	<!--<p class="notice"><%= notice %></p>-->
+	<!--<p class="alert"><%= alert %></p> -->
 	<%= yield %>
 	<footer class="spacer">
 	        <div class="container">
