@@ -20,4 +20,6 @@
 //= require respond/src/respond
 //= require blueimp-gallery/js/blueimp-gallery
 //= require select2/select2
+//= require ResponsiveSlides/responsiveslides
 //= require_tree .
+Turbolinks.enableProgressBar();

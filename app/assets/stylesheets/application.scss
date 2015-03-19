@@ -14,6 +14,7 @@
  *= require animate.css/animate
  *= require blueimp-gallery/css/blueimp-gallery
  *= require select2/select2
+ *= require ResponsiveSlides/responsiveslides
  */
 @import "variables";
 @import "mixins";
@@ -22,6 +23,5 @@
 @import "h5bp";
 @import "extend";
 @import "layout";
-@import "chat";
 @import "print";
 @import "helpers";

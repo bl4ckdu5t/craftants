@@ -1,4 +1,12 @@
 var ready = function(){
+  /* Responsive images slider */
+  $(".rslides").responsiveSlides({
+    pager: true,
+    nav: true,
+    speed: 500,
+    maxwidth: 800,
+    namespace: "transparent-btns"
+  });
 	/* Select2 Select boxes */
 	$('.select2').select2();
 	/* Smooth Scroll for in page links */
