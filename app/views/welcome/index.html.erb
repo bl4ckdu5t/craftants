@@ -7,8 +7,8 @@
                 <h1  class="animated fadeInDown">CraftAnts</h1>
                 <p class="animated fadeInUp">Find skills and crafts around you.</p>  
                 <div class="search--artisans">
-                <%= select_tag :artisan, options_for_select([['Artisan', ''],['engineer', '']]), class: 'select2' %>
-                <%= select_tag :artisan, options_for_select([['Location', ''],['engineer', '']]), class: 'select2' %>
+                <%= select_tag :artisan, options_for_select([['Artisan', 0]] + @categories, 0), class: 'select2' %>
+                <%= select_tag :artisan, options_for_select([['Location', ''],['Mountain View CA', '']]), class: 'select2' %>
                 <%= button_tag :search %>
                 </div>
             </div>
@@ -71,7 +71,7 @@
             <input type="password" class="form-control"  placeholder="Confirm Password">
         </div>
         <button class="btn btn-default">Submit</button>
-    </form>    
+    </form>
 </div>
 </div>  
 </div>
