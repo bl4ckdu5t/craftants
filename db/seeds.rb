@@ -24,6 +24,43 @@ categories = [
 	[16,'photographer'],
 	[17,'computer repairs']
 ]
+cities = [
+	['Agbado/Oke-Odo','Lagos','Nigeria'],
+	['Agboyi/Ketu','Lagos','Nigeria'],
+	['Agege','Lagos','Nigeria'],
+	['Alimosho','Lagos','Nigeria'],
+	['Amuwo Odofin','Lagos','Nigeria'],
+	['Apapa','Lagos','Nigeria'],
+	['Apapa-Iganmu','Lagos','Nigeria'],
+	['Ayobo/Ipaja','Lagos','Nigeria'],
+	['Badagry','Lagos','Nigeria'],
+	['Egbe Idimu','Lagos','Nigeria'],
+	['Eti Osa East','Lagos','Nigeria'],
+	['Ifako Ijaye','Lagos','Nigeria'],
+	['Igando/Ikotun','Lagos','Nigeria'],
+	['Ikeja','Lagos','Nigeria'],
+	['Ikorodu','Lagos','Nigeria'],
+	['Ikoyi-Obalende','Lagos','Nigeria'],
+	['Iru/Victoria Island','Lagos','Nigeria'],
+	['Isolo','Lagos','Nigeria'],
+	['Kosofe','Lagos','Nigeria'],
+	['Lekki','Lagos','Nigeria'],
+	['Lagos Island East','Lagos','Nigeria'],
+	['Lagos Island West','Lagos','Nigeria'],
+	['Lagos Mainland','Lagos','Nigeria'],
+	['Mushin','Lagos','Nigeria'],
+	['Ojo','Lagos','Nigeria'],
+	['Ojodu','Lagos','Nigeria'],
+	['Oshodi','Lagos','Nigeria'],
+	['Shomolu','Lagos','Nigeria'],
+	['Surulere','Lagos','Nigeria'],
+	['Yaba','Lagos','Nigeria'],
+]
+=begin
 categories.each do |index, category|
 	Category.create!(index: "#{index}", name: "#{category}")
+end
+=end
+cities.each do |city, state, country|
+	Location.create!(city: "#{city}", state: "#{state}",country: "#{country}")
 end
