@@ -56,11 +56,11 @@ cities = [
 	['Surulere','Lagos','Nigeria'],
 	['Yaba','Lagos','Nigeria'],
 ]
-=begin
+
 categories.each do |index, category|
 	Category.create!(index: "#{index}", name: "#{category}")
 end
-=end
+
 cities.each do |city, state, country|
 	Location.create!(city: "#{city}", state: "#{state}",country: "#{country}")
 end
