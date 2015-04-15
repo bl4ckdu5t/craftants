@@ -121,7 +121,7 @@ article{ padding: 20px 80px; }
 			border: 1px solid #c8c8c8;
 			color: #777;
 			margin: 0 0 10px;
-			padding: 15px 10px 15px 40px;
+			padding: 15px 10px;
 			width: 80%;
 			&:focus{
 				box-shadow: 0 0 2px #ed1c24 inset;
@@ -151,14 +151,6 @@ article{ padding: 20px 80px; }
 			}
 		}
 	}
-	&-username{
-		background: #eae7e7 url(http://cssdeck.com/uploads/media/items/8/8bcLQqF.png) no-repeat;
-	 	background-position: 10px 15px;
-	}
-	&-pass{
-		background: #eae7e7 url(http://cssdeck.com/uploads/media/items/8/8bcLQqF.png) no-repeat;
-		background-position: 10px -48px;
-	}
 }
 .devise-links {
 	clear: both;
@@ -174,4 +166,7 @@ article{ padding: 20px 80px; }
 	a:hover{
 		text-decoration: underline
 	}
+}
+.navbar.navbar-inverse{
+	border-radius: 0;
 }

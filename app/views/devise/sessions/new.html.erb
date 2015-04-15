@@ -1,4 +1,7 @@
 <section class="authentication">
+  <% flash.each do |name, msg| %>
+    <%= content_tag :div, msg, :class => 'alert alert-danger' %>
+  <% end %>
   <%= form_for resource, as: resource_name, url: session_path(resource_name),class: 'clearfix',html: {class: 'clearfix'} do |f| %>
     <h2>Login Form</h2>
     <div class="field">
