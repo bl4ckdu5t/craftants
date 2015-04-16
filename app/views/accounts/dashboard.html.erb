@@ -1,17 +1,50 @@
 <section class="spacer">
 	<div class="container">
 		<div class="row">
-			<div class="col-md-3">
+			<div class="col-md-3 col-lg-3 col-sm-12">
+				<!-- Profile Thumbnail -->
 		    <div class="thumbnail">
-		      <img src="http://placehold.it/242x200" alt="profile">
+		      <img src="http://placehold.it/242x200" class="img-thumbnail" alt="profile">
 		      <div class="caption">
 		        <h3>Thumbnail label</h3>
 		        <p>...</p>
 		        <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
 		      </div>
 		    </div>
+		    <!-- / Profile Thumbnail -->
 		  </div>
-			<div class="col-md-9">Jeremy</div>
+			<div class="col-md-9 col-lg-9 col-sm-12">
+				<!-- Tab Panel -->
+				<div role="tabpanel">
+					<!-- Nav Tabs -->
+					<ul class="nav nav-tabs" id="myTab" role="tablist">
+					  <li role="presentation" class="active"><a href="#overview" aria-controls="overview" role="tab" data-toggle="tab">Overview</a></li>
+					  <li role="presentation"><a href="#reviews" aria-controls="reviews" role="tab" data-toggle="tab">Reviews</a></li>
+					</ul>
+
+					<!-- Tab panes -->
+					<div class="tab-content">
+						<!-- Overview Tab -->
+						<div role="tabpanel" class="tab-pane active" id="overview">
+							<nav class="navbar navbar-default mini-header">
+							  <div class="container-fluid">
+							    <div class="navbar-header">
+							        <h3>About</h3>
+							    </div>
+							  </div>
+							</nav>
+							<article>
+								Something here
+							</article>
+						</div>
+						<!-- / Overview Tab -->
+						<!-- Reviews Tab -->
+    				<div role="tabpanel" class="tab-pane" id="reviews">Not so cool</div>
+    				<!-- / Reviews Tab -->
+    			</div>
+				</div>
+				<!-- / Tab panel -->
+			</div>
 		</div>
 	</div>
 </section>

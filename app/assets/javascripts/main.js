@@ -53,6 +53,12 @@ var ready = function(){
     }
   );
   wow.init();
+  
+  /* Tab switch on user profile */
+  $('#myTab a').click(function (e) {
+    e.preventDefault()
+    $(this).tab('show')
+  });
 };
 // Ready Pages
 $(document).ready(ready);
