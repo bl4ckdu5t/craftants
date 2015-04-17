@@ -179,8 +179,23 @@ article{padding: 20px 10px;}
 	background-image: linear-gradient(to bottom, #FFF, #F2F2F2);
 	border: solid thin #ccc;
 	border-radius: 4px;
-	padding: 15px 10px;
+	padding: 10px;
+	min-height: 35px;
 	h3{
 		margin: 0;
+		font-size: 1.5rem;
+	}
+}
+.profile-avatar{
+	width: 200px;
+	height: 200px;
+}
+.search{
+	padding: 20px 0;
+	&-list{
+		list-style-type: none;
+		padding: 0;
+		margin-bottom: 10px;
+		border: solid thin #ccc;
 	}
 }

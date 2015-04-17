@@ -37,7 +37,7 @@
 	          	<%= current_user.name %> <span class="caret"></span>
 	          </a>
 	          <ul class="dropdown-menu" role="menu">
-	            <li><a href="#">My Profile</a></li>
+	            <li><%= link_to "My Profile", artisan_profile_path(current_user.id) %></li>
 	            <li><%= link_to "How it works", story_path %></li>
 	            <li><%= link_to "Dashboard", dashboard_path %></li>
 	            <li class="divider"></li>

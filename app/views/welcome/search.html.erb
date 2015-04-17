@@ -1,0 +1,15 @@
+<section class="search container">
+	<% if @artisans.exists? %>
+	<% @artisans.each do |artisan| %>
+	<ul class="search-list">
+		<li>
+			<img src="http://placehold.it/100x100" alt="sample">
+			<span><%= artisan.name %></span>
+			<button>View Profile</button>
+		</li>
+	</ul>
+	<% end %>
+	<% else %>
+		<h2>There were no results found</h2>
+	<% end %>
+</section>
