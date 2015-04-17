@@ -11,6 +11,6 @@ class WelcomeController < ApplicationController
   def search
   	artisan = params[:artisan]
   	location = params[:location]
-  	@artisans = User.where(specialization: artisan, location: location)
+  	@artisans = User.where(specialization: artisan, location: location, approved: true)
   end
 end
