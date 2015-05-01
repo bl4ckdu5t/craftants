@@ -2,10 +2,20 @@
 	<% if @artisans.exists? %>
 	<% @artisans.each do |artisan| %>
 	<ul class="search-list">
-		<li>
-			<img src="http://placehold.it/100x100" alt="sample">
-			<span><%= artisan.name %></span>
-			<button>View Profile</button>
+		<li class="clearfix">
+			<div class="col-md-1">
+				<img src="http://placehold.it/200x200" alt="sample">
+			</div>
+			<div class="col-md-9">
+				<h3><%= artisan.name %></h3>
+				<span><%= "#{Category.find_by_index(artisan.specialization).name}".capitalize %></span>
+			</div>
+			<div class="col-md-2">
+				<%= link_to artisan_profile_path(artisan.id), class: 'directional' do %>
+				<i class="fa fa-paper-plane fa-2x"></i>
+				View Profile
+				<% end %>
+			</div>
 		</li>
 	</ul>
 	<% end %>

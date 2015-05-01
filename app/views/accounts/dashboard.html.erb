@@ -1,63 +1,20 @@
+<header class="dashboard--header">
+	<%= image_tag "http://images.ostrich-dev.com/profile.jpg", class: 'img-circle img-thumbnail', alt: "profile image" %>
+	<h2><%= @user.name %></h2>
+	<span><i class="fa fa-building"></i> <%= "#{Category.find_by_index(@user.specialization).name}".capitalize %>
+		from <%= "#{Location.find(@user.location).city}, #{Location.find(@user.location).state}" %>
+	</span>
+</header>
 <section class="spacer">
 	<div class="container">
 		<div class="row">
-			<div class="col-md-3 col-lg-3 col-sm-12">
-				<!-- Profile Thumbnail -->
-		    <div class="thumbnail pad20 txtcenter">
-		      <img src="http://placehold.it/200x200" class="img-circle img-thumbnail profile-avatar" alt="profile">
-		      <div class="caption">
-		        <h3>Thumbnail label</h3>
-		        <p>Rating</p>
-		        <p>Location</p>
-		      </div>
-		    </div>
-		    <!-- / Profile Thumbnail -->
-		  </div>
-			<div class="col-md-9 col-lg-9 col-sm-12">
-				<!-- Tab Panel -->
-				<div role="tabpanel">
-					<!-- Nav Tabs -->
-					<ul class="nav nav-tabs" id="myTab" role="tablist">
-					  <li role="presentation" class="active"><a href="#overview" aria-controls="overview" role="tab" data-toggle="tab">Overview</a></li>
-					  <li role="presentation"><a href="#reviews" aria-controls="reviews" role="tab" data-toggle="tab">Reviews</a></li>
-					</ul>
-
-					<!-- Tab panes -->
-					<div class="tab-content">
-						<!-- Overview Tab -->
-						<div role="tabpanel" class="tab-pane active" id="overview">
-							<!-- Profile Summary -->
-							<nav class="navbar navbar-default mini-header">
-							  <div class="container-fluid">
-							    <div class="navbar-header">
-							        <h3>Profile</h3>
-							    </div>
-							  </div>
-							</nav>
-							<article>
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab cupiditate, molestiae quam delectus quaerat animi unde qui, vel, aut nemo itaque accusamus esse nihil soluta, ducimus illo! Cum incidunt, voluptatibus, asperiores hic eaque reiciendis. Dolorum, ex.
-							</article>
-							<!-- / Profile Summary -->
-							<!-- Specialization -->
-							<nav class="navbar navbar-default mini-header">
-							  <div class="container-fluid">
-							    <div class="navbar-header">
-							        <h3>Specialization</h3>
-							    </div>
-							  </div>
-							</nav>
-							<article>
-								Electrician - Household Electronics
-							</article>
-							<!-- / Specialization -->
-						</div>
-						<!-- / Overview Tab -->
-						<!-- Reviews Tab -->
-    				<div role="tabpanel" class="tab-pane" id="reviews">Not so cool</div>
-    				<!-- / Reviews Tab -->
-    			</div>
-				</div>
-				<!-- / Tab panel -->
+			<div class="col-md-6">
+				<h3>Social Networks</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo eaque magnam quas, natus sequi nostrum suscipit voluptatum corrupti officia ad.</p>
+			</div>
+			<div class="col-md-6">
+				<h3>Upload Profile Image</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero deserunt cumque possimus voluptas harum, adipisci soluta mollitia hic natus vitae.</p>
 			</div>
 		</div>
 	</div>

@@ -3,7 +3,7 @@ class AccountsController < ApplicationController
 	layout 'accounts'
 
 	def dashboard
-		
+		@user = current_user
 	end
 
 	def profile

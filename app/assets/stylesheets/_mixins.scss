@@ -206,3 +206,8 @@
 
   z-index: $distance * 100;
 }
+
+@mixin tinted-bg($overlay-color, $alpha-level, $image, $size: normal){
+  background: linear-gradient(rgba($overlay-color, $alpha-level), rgba($overlay-color, $alpha-level)), image-url($image);
+  background-size: $size;
+}

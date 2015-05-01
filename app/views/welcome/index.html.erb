@@ -10,7 +10,7 @@
                     <%= form_tag "/search", method: 'get' do %>
                     <%= select_tag :artisan, options_for_select([['Artisan', 0]] + @categories, 0), class: 'select2' %>
                     <%= select_tag :location, options_for_select([['Location', 0]] + @locations, 0), class: 'select2' %>
-                    <%= button_tag :search %>
+                    <%= button_tag :search, name: '' %>
                     <% end %>
                 </div>
             </div>
