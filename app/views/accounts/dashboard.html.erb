@@ -1,5 +1,5 @@
 <header class="dashboard--header">
-	<%= image_tag "http://images.ostrich-dev.com/profile.jpg", class: 'img-circle img-thumbnail', alt: "profile image" %>
+	<%= image_tag @image_src, class: 'img-circle img-thumbnail', alt: 'profile image' %>
 	<h2><%= @user.name %></h2>
 	<span><i class="fa fa-building"></i> <%= "#{Category.find_by_index(@user.specialization).name}".capitalize %>
 		from <%= "#{Location.find(@user.location).city}, #{Location.find(@user.location).state}" %>
@@ -9,12 +9,33 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-6">
-				<h3>Social Networks</h3>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo eaque magnam quas, natus sequi nostrum suscipit voluptatum corrupti officia ad.</p>
+				<div class="media">
+				  <div class="media-left">
+				    <a href="#">
+				      <%= image_tag @image_src, class: 'media-object', alt: 'Gravatar image' %>
+				    </a>
+				  </div>
+				  <div class="media-body">
+				    <h4 class="media-heading">Profile Image</h4>
+				    <p>Image is fetched from Gravatar. <%= link_to 'Create a gravatar account', "http://en.gravatar.com", target: '_blank', class: 'link-color' %> to upload your image</p>
+				  </div>
+				  <br>
+				  <h4>Edit Profile</h4>
+				  <%= form_for current_user, html: { class: 'dashboard-form'} do |f| %>
+				  <%= f.label :name, 'Name: ' %>
+				  <%= f.text_field :name %>
+				  <%= f.label :phone %>
+				  <%= f.telephone_field :phone %>
+				  <%= f.label :specialization %>
+				  <%= f.select :specialization, options_for_select(@categories, current_user.specialization), class: 'select2' %>
+				  <%= f.label :location %>
+          <%= f.select :location, options_for_select(@locations, current_user.location), class: 'select2' %>
+				  <% end %>
+				</div>
 			</div>
 			<div class="col-md-6">
-				<h3>Upload Profile Image</h3>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero deserunt cumque possimus voluptas harum, adipisci soluta mollitia hic natus vitae.</p>
+				<h3>Social Networks</h3>
+				<p>Select a social network and add a URL to it.</p>
 			</div>
 		</div>
 	</div>

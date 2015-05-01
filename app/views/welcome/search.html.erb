@@ -1,10 +1,11 @@
 <section class="search container">
 	<% if @artisans.exists? %>
+	<h3><%= @artisans.count %> <%= single_or_not('artisan', @artisans.count) %> matching your search</h3>
 	<% @artisans.each do |artisan| %>
 	<ul class="search-list">
 		<li class="clearfix">
 			<div class="col-md-1">
-				<img src="http://placehold.it/200x200" alt="sample">
+				<%= image_tag gravatar_src(artisan.email), alt: 'User image' %>
 			</div>
 			<div class="col-md-9">
 				<h3><%= artisan.name %></h3>

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+	resource :user
   get 'search' => 'welcome#search', as: :search
   get 'artisan/:id' => 'accounts#profile', as: :artisan_profile
   get 'dashboard' => 'accounts#dashboard', as: :dashboard
