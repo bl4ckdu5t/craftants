@@ -10,7 +10,10 @@ class UsersController < ApplicationController
 	end
 
 	def destroy
-		render text: 'Bazinga' and return
+		@user = User.find(params[:format])
+		if @user.destroy
+			redirect_to root_path
+		end
 	end
 
 	private

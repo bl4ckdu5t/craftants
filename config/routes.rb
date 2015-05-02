@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+	post 'social' => 'accounts#add_socials', as: :new_social
 	resource :user
   get 'search' => 'welcome#search', as: :search
   get 'artisan/:id' => 'accounts#profile', as: :artisan_profile

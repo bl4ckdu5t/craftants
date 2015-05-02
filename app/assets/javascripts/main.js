@@ -66,7 +66,7 @@ var ready = function(){
   var markup          = '<div class="social-field"><label for="title[]">Title:&nbsp;</label>'+
   '<input type="text" name="title[]" placeholder="Title"><label for="url[]">&nbsp;URL:&nbsp;</label>'+
   '<input type="url" name="url[]" placeholder="URL"> '+
-  '&nbsp;&nbsp;<a href="#" class="remove_field"><i class="fa fa-trash"></i></a></div>';
+  '&nbsp;&nbsp;<a href="#" class="remove_field"><i class="fa fa-trash-o"></i></a></div>';
   
   var x = 1; //initlal text box count
   $(add_button).click(function(e){ //on add input button click

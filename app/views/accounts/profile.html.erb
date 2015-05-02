@@ -89,9 +89,10 @@
 							  </div>
 							</nav>
 							<article>
-								<p><i class="fa fa-facebook"></i> joerex101</p>
-								<p><i class="fa fa-twitter"></i> joerex101</p>
-								<p><i class="fa fa-linkedin"></i> /in/joerex101</p>
+								<% @socials.each do |site| %>
+						<%= image_tag "http://grabicon.com/icon?domain=#{site.url.split('/')[0]+'//'+site.url.split('/')[2]}.&size=32" %>
+								<%= link_to site.title, site.url, class: 'link-color', target: '_blank' %>
+								<% end %>
 							</article>
 							<!-- / Social Networks -->
 						</div>

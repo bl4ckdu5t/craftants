@@ -46,15 +46,26 @@
 			<div class="col-md-6">
 				<h3>Social Networks</h3>
 				<p>Select a social network and add a URL to it.</p>
-				<%= form_tag do %>
+				<%= form_tag new_social_path, remote: true do %>
 				<div class="input_fields_wrap social-edit">
-				  <button class="add_field_button btn btn-primary">Add More Fields</button>
+				  <button class="add_field_button btn btn-primary">Add More Social Links</button>
+				  <% if Social.where(user_id: current_user.id).exists? %>
+				  <% Social.where(user_id: current_user.id).each do |site| %>
+				  <div class="social-field">
+				  	<label for="title[]">Title: </label>
+				  	<input type="text" name="title[]" placeholder="e.g Facebook" value="<%= site.title %>">
+				  	<label for="url[]">URL: </label>
+				  	<input type="url" name="url[]" placeholder="e.g http://facebook.com/example" value="<%= site.url %>">
+				  </div>
+				  <% end %>
+				  <% else %>
 				  <div class="social-field">
 				  	<label for="title[]">Title: </label>
 				  	<input type="text" name="title[]" placeholder="e.g Facebook">
 				  	<label for="url[]">URL: </label>
-				  	<input type="url" name="url[]" placeholder="e.g http://facebook.com/CraftAnts">
+				  	<input type="url" name="url[]" placeholder="e.g http://facebook.com/example">
 				  </div>
+				  <% end %>
 				</div>
 				<%= submit_tag "Save", class: 'btn btn-default' %>
 				<% end %>
