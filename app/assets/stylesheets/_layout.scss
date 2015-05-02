@@ -263,9 +263,39 @@ article{padding: 20px 10px;}
 		}
 		label{
 			margin-top: 10px;
-		}	
+		}
+		textarea{
+			border: none;
+			border-bottom: solid thin #888;
+			width: 100%;
+			height: 60px;
+			resize: none;
+			&:focus, &:active{
+				outline-color: $color-primary;
+			}
+		}
 	}
 }
 .link-color{
 	color: $myblue;
+}
+.alert:empty{
+	display: none;
+}
+.social{
+	&-field{
+		margin: 20px 0;
+		[type=text],[type=url]{
+			height: 40px;
+			border: solid thin #aaa;
+			box-shadow: 1px 1px 3px #aaa;
+			padding: 0 5px;
+		}
+		[type=text]{
+			width: 150px;
+		}
+		[type=url]{
+			min-width: 240px;
+		}
+	}
 }

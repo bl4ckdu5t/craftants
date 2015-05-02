@@ -59,6 +59,27 @@ var ready = function(){
     e.preventDefault()
     $(this).tab('show')
   });
+
+  var max_fields      = 10; //maximum input boxes allowed
+  var wrapper         = $(".input_fields_wrap"); //Fields wrapper
+  var add_button      = $(".add_field_button"); //Add button ID
+  var markup          = '<div class="social-field"><label for="title[]">Title:&nbsp;</label>'+
+  '<input type="text" name="title[]" placeholder="Title"><label for="url[]">&nbsp;URL:&nbsp;</label>'+
+  '<input type="url" name="url[]" placeholder="URL"> '+
+  '&nbsp;&nbsp;<a href="#" class="remove_field"><i class="fa fa-trash"></i></a></div>';
+  
+  var x = 1; //initlal text box count
+  $(add_button).click(function(e){ //on add input button click
+      e.preventDefault();
+      if(x < max_fields){ //max input box allowed
+          x++; //text box increment
+          $(wrapper).append(markup); //add input box
+      }
+  });
+  
+  $(wrapper).on("click",".remove_field", function(e){ //user click on remove text
+      e.preventDefault(); $(this).parent('div').remove(); x--;
+  });
 };
 // Ready Pages
 $(document).ready(ready);

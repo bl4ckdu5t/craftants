@@ -38,8 +38,8 @@
 							  </div>
 							</nav>
 							<article>
-								<p><strong>Gender:</strong> male</p>
-								<p><strong>Nationality:</strong> Nigerian</p>
+								<p><strong>Gender:</strong> <%= User.find(params[:id]).gender %></p>
+								<p><strong>Nationality:</strong> <%= User.find(params[:id]).nationality %></p>
 							</article>
 							<!-- / About -->
 							<!-- Profile Summary -->
@@ -51,7 +51,7 @@
 							  </div>
 							</nav>
 							<article>
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab cupiditate, molestiae quam delectus quaerat animi unde qui, vel, aut nemo itaque accusamus esse nihil soluta, ducimus illo! Cum incidunt, voluptatibus, asperiores hic eaque reiciendis. Dolorum, ex.
+								<%= User.find(params[:id]).about.blank? ? 'No profile info' : User.find(params[:id]).about %>
 							</article>
 							<!-- / Profile Summary -->
 							<!-- Specialization -->
@@ -63,7 +63,7 @@
 							  </div>
 							</nav>
 							<article>
-								Electrician - Household Electronics
+								<%= Category.find_by_index(User.find(params[:id]).specialization).name.capitalize %>
 							</article>
 							<!-- / Specialization -->
 							<!-- Contact details -->
@@ -77,7 +77,7 @@
 							<article>
 								<p><strong>Phone:</strong> <%= User.find(params[:id]).phone %></p>
 								<p><strong>Email:</strong> <%= User.find(params[:id]).email %></p>
-								<p><strong>Address:</strong> 248, East Becher Street, Milwaukee, WI</p>
+								<p><strong>Address:</strong> <%= User.find(params[:id]).address %></p>
 							</article>
 							<!-- / Contact details -->
 							<!-- Social Networks -->

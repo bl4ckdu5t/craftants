@@ -1,6 +1,6 @@
 <section class="search container">
 	<% if @artisans.exists? %>
-	<h3><%= @artisans.count %> <%= single_or_not('artisan', @artisans.count) %> matching your search</h3>
+	<h3><%= @artisans.count %> <%= single_or_not('artisan', @artisans.count) %> matched your search</h3>
 	<% @artisans.each do |artisan| %>
 	<ul class="search-list">
 		<li class="clearfix">
@@ -24,3 +24,4 @@
 		<h2>There were no results found</h2>
 	<% end %>
 </section>
+<div class="spacer"></div>
