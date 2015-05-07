@@ -17,7 +17,7 @@ class AccountsController < ApplicationController
 		email_address = @user.email.downcase
 		hash = Digest::MD5.hexdigest(email_address)
 		@image_src = "http://www.gravatar.com/avatar/#{hash}"
-		@socials = Social.where(user_id: current_user.id)
+		@socials = Social.where(user_id: params[:id])
 	end
 
 	def add_socials
