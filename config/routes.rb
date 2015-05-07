@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  post '/rate' => 'rater#create', :as => 'rate'
 	post 'social' => 'accounts#add_socials', as: :new_social
 	resource :user
   get 'search' => 'welcome#search', as: :search

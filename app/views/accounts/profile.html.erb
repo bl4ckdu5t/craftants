@@ -7,7 +7,7 @@
 		    	<%= image_tag @image_src, :class => 'img-circle img-thumbnail profile-avatar', :alt => 'profile' %>
 		      <div class="caption">
 		        <h3><%= @user.name %></h3>
-		        <p>Rating</p>
+		        <p><%= rating_for Category.first, "completion" %></p>
 		        <p>
 		        	<%= image_tag 'http://img.freeflagicons.com/thumb/round_icon/nigeria/nigeria_64.png', class: 'country-flag' %> 
 		        	<%= "#{Location.find(@user.location).city}, #{Location.find(@user.location).state}" %>

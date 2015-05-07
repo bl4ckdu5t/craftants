@@ -13,6 +13,7 @@ class AccountsController < ApplicationController
 
 	def profile
 		@user = User.find(params[:id])
+		@category = Category.find_by_index(1)
 		email_address = @user.email.downcase
 		hash = Digest::MD5.hexdigest(email_address)
 		@image_src = "http://www.gravatar.com/avatar/#{hash}"

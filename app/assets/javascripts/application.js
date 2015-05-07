@@ -21,5 +21,7 @@
 //= require blueimp-gallery/js/blueimp-gallery
 //= require select2/select2
 //= require ResponsiveSlides/responsiveslides
+//= require jquery.raty
+//= require ratyrate
 //= require_tree .
 Turbolinks.enableProgressBar();

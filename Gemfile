@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 ruby "2.1.2"
+# Ratyrate for ratings
+gem 'ratyrate'
 # Devise Gem for authentication
 gem 'devise'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
